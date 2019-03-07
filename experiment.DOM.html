@@ -21,7 +21,8 @@
       }
       
       $("body").append("<h1> This will fade out! </h1>");
-      $("h1").fadeOut(3000);
+      $("h1").fadeOut(3000).fadeIn(2000); // this fades out then fades back in
+      $("h1").slideUp(1000).slideDown(1000);
       
     </script>
     
