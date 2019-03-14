@@ -33,6 +33,16 @@
         var yDifference = event.offsety - treasure.y;
         return.Math.sqrt((xDifference * xDifference) +
                          (yDifference * yDifference)); //Pythagorean Theorem
+         var clicks = 0;
+
+      $("#map").click(function(event){
+         // Click handler code goes here
+         // Check for distance
+         // Check if they are close enough to find the treasure
+         // If they have 'found it' tell them how many clicks it took
+         // Give a hint if they are too far away
+         clicks++;
+         });  
         
     </script>
   </body>
