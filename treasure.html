@@ -33,14 +33,30 @@
         var yDifference = event.offsety - treasure.y;
         return.Math.sqrt((xDifference * xDifference) +
                          (yDifference * yDifference)); //Pythagorean Theorem
+      };
          var clicks = 0;
 
       $("#map").click(function(event){
          // Click handler code goes here
          // Check for distance
+          var distance = getDistanceToTreasure(event, treasure);
          // Check if they are close enough to find the treasure
          // If they have 'found it' tell them how many clicks it took
-         // Give a hint if they are too far away
+          if(distance <= 15)
+          {
+            alert("You are close to the treasure!");
+          }else{
+            // Give a hint if they are too far away
+          } if(distance <= 30)
+            {
+              alert("You are getting warmer!");
+            }else if (distance <= 100)
+            {
+              alert("You're making prgress");
+            }else if (distance >= 101)
+              alert("You need to keep looking!");
+            }
+      })=;
          clicks++;
          });  
         
