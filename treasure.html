@@ -9,7 +9,7 @@
     <img id = "map" width=400 height=400
       src="https://nostarch.com/images/treasuremap.png">
       
-    <p id="distance"<>/p>
+    <p id="distance"></p>
     
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     
@@ -47,7 +47,7 @@
             alert("You are close to the treasure!");
           }else{
             // Give a hint if they are too far away
-          } if(distance <= 30)
+            if(distance <= 30)
             {
               alert("You are getting warmer!");
             }else if (distance <= 100)
@@ -56,6 +56,10 @@
             }else if (distance >= 101)
               alert("You need to keep looking!");
             }
+         }
+         if (distance <= 5)
+          alert("You've found the treasure!");
+             
       })=;
          clicks++;
          });  
