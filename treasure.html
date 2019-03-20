@@ -31,11 +31,10 @@
       {
         var xDifference = event.offsetX - treasure.x;
         var yDifference = event.offsety - treasure.y;
-        return.Math.sqrt((xDifference * xDifference) +
+        return Math.sqrt((xDifference * xDifference) +
                          (yDifference * yDifference)); //Pythagorean Theorem
       };
          var clicks = 0;
-
       $("#map").click(function(event){
          // Click handler code goes here
          // Check for distance
@@ -47,23 +46,19 @@
             alert("You are close to the treasure!");
           }else{
             // Give a hint if they are too far away
-            if(distance <= 30)
+           if(distance <= 30)
             {
               alert("You are getting warmer!");
             }else if (distance <= 100)
             {
               alert("You're making prgress");
-            }else if (distance >= 101)
+            }else if (distance >= 101){
               alert("You need to keep looking!");
             }
-         }
-         if (distance <= 5)
-          alert("You've found the treasure!");
-             
-      })=;
+          }
          clicks++;
          });  
         
     </script>
   </body>
-</html>
+</html> 
