@@ -37,12 +37,30 @@
       Car.prototype.moveRight = function()
       {
         this.x += 5; // adds 5 to the x value
+        // this updates the position on the screen
+        this.carElement.css({
+          left: this.x, 
+          top: this.y
+        });
+      };
       Car.prototype.moveLeft = function()
       {
         this.x -= 5; // subtracts 5 from the x value
+        // this updates the position on the screen
+        this.carElement.css({
+          left: this.x, 
+          top: this.y
+        });
+      };
       Car.prototype.moveDown = function()
       {
         this.y += 5; // adds 5 to the y value
+        // this updates the position on the screen
+        this.carElement.css({
+          left: this.x, 
+          top: this.y
+        });
+      };
       Car.prototype.moveUp = function()
       {
         this.y -= 5; // subtracts 5 from the y value
