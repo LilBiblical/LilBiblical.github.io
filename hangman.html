@@ -11,7 +11,48 @@
        var ctx = canvas.getContext("2d"); // tells javascript that the drawing will be 2 dimensional
        ctx.strokeStyle="black"
        ctx.lineWidth="1"
+       var head = function()
+       {
+         ctx.strokeRect(40 , 0, 20, 20);
+       }
        
+       var body = function()
+       {
+         ctx.beginPath();
+           ctx.moveTo(50,20);
+           ctx.lineTo( 50, 60);
+         ctx.stroke();
+       }
+       
+       // Create functions for the body parts
+       var rightArm = function()
+       {
+         ctx.beginPath();
+          ctx.moveTo( 50, 35);
+          ctx.lineTo( 80, 11);
+         ctx.stroke();
+       }
+   var leftArm = function()
+  {
+    ctx.beginPath(); 
+      ctx.moveTo( 50, 35);
+      ctx.lineTo( 20, 11);
+    ctx.stroke();
+  } 
+   var rightLeg = function()
+  {
+     ctx.beginPath();
+      ctx.moveTo( 50, 60);
+      ctx.lineTo( 80, 85);
+     ctx.stroke();
+  }
+   var leftLeg = function()
+  {
+     ctx.beginPath();
+      ctx.moveTo( 50, 60);
+      ctx.lineTo( 20, 85);
+   ctx.stroke();
+  }
        
        //Create a list of words to choose from
        var words = ["Shelbi", "Baylee", "Mia", "Hailey", "Anna", "Morgan", "Logan", "Chris", "James", "McKayla", "Nick"];
@@ -58,14 +99,26 @@
                       // They missed for the first time, draw the head
                       head();
                     }
-                    if(lives === 4)
+                    else if(lives === 4)
                     {
                       body();
                     }
-                  }
-                }
-              }
-           }
+                    else if(lives === 3)
+                    {
+                      rightArm();
+                    }
+                    else if(lives === 2)
+                    {
+                      leftArm();
+                    }
+                    else if(lives === 1)
+                    {
+                      rightLeg();
+                    }
+                    else if(lives === 0)
+                    {
+                      leftLeg();
+                    }
            alert("Good job! The answer was " + word);
        
        var head = function()
